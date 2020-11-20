@@ -67,7 +67,14 @@
                     </div>
                     <!-- contatti  -->
                     <div class="contact">
-
+                        <template v-for="(contatto,index) in contatti">
+                            <div>
+                                <img class="photo-utente" :src="contatto.avatar" alt="">
+                               
+                                <span class="nomi">{{contatto.nome}}</span>
+                                
+                            </div>
+                        </template>
                     </div>
                     
                 </div>
