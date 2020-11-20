@@ -25,10 +25,19 @@
         <main id="root" class="container">
             <div class="box-app ">
                 <div class="left-bar">
-                    <div class="user-data height-30">
-
+                    <div class="user-data height-60">
+                        <span class="icon-position">
+                            <img class="photo-utente" src="img/avatar_io.jpg" alt="my-image">
+                            <h4>Nome Utente</h4>
+                            
+                        </span>
+                        <span class="icon-position">
+                            <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </span>
                     </div>
-                    <div class="notify height-30">
+                    <div class="notify height-60">
 
                     </div>
                     <div class="search-bar">
@@ -40,8 +49,35 @@
                     
                 </div>
                 <div class="right-bar">
-                    <div class="friend-data height-30">
+                    <div class="friend-data height-60 user-data">
+                        <span class="icon-position ">
+                            <span class="">
+                            
+                                <img class="photo-utente" :src="contatti
+                            [counter].avatar" alt="avata1">
+                            </span>
+                            <span>
+                                <p>
+                                    {{contatti[counter].nome}} 
+                                </p>
+                                <small>Ultimo accesso oggi alle </small>
+                                
+                            </span>
+                        </span>
+                        <span class="icon-position">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <i class="fa fa-paperclip" aria-hidden="true"></i>
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 
+                        </span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>
                     <div class="chat">
 
