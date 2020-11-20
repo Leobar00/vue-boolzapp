@@ -24,33 +24,54 @@
         <!-- collegamento con Vue -->
         <main id="root" class="container">
             <div class="box-app ">
+                <!-- parte sinistra -->
                 <div class="left-bar">
+                    <!-- dati utente principale -->
                     <div class="user-data height-60">
+                        <!-- foto e titolo -->
                         <span class="icon-position">
                             <img class="photo-utente" src="img/avatar_io.jpg" alt="my-image">
                             <h4>Nome Utente</h4>
                             
                         </span>
+                        <!-- icone -->
                         <span class="icon-position">
                             <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
                             <i class="fa fa-comment" aria-hidden="true"></i>
                             <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                         </span>
                     </div>
-                    <div class="notify height-60">
+                    <!-- campanella per le notifiche -->
+                    <div class=" section-notify">
+                        <div class='bell'>
+                            <span>
 
+                                <i class="fa fa-bell-slash" aria-hidden="true"></i>
+                            </span>
+
+                        </div>
+                        <div>
+                            <p>Ricevi notifiche di nuovi
+                                messaggi</p>
+                            <small>Attiva notifiche desktop</small>
+                            
+                        </div>
                     </div>
+                    <!-- barra cerca contatti  -->
                     <div class="search-bar">
 
                     </div>
+                    <!-- contatti  -->
                     <div class="contact">
 
                     </div>
                     
                 </div>
+                <!-- parte destra -->
                 <div class="right-bar">
                     <div class="friend-data height-60 user-data">
                         <span class="icon-position ">
+                            <!-- foto utente  -->
                             <span class="">
                             
                                 <img class="photo-utente" :src="contatti
@@ -64,23 +85,17 @@
                                 
                             </span>
                         </span>
+                        <!-- icone  -->
                         <span class="icon-position">
                             <i class="fa fa-search" aria-hidden="true"></i>
                             <i class="fa fa-paperclip" aria-hidden="true"></i>
                             <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 
-                        </span>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        </span>                
                     </div>
+                    <!-- chat con la persona -->
                     <div class="chat">
-
+                        
                     </div>
                     <div class="input-data">
 

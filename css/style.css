@@ -47,7 +47,7 @@ body{
 }
 .icon-position i{
     margin: 10px;
-    font-size: 25px;
+    font-size: 20px;
     color: #b2b0b2;
 }
 .photo-utente{
@@ -62,8 +62,37 @@ body{
     min-width: 400px;
 
 }
+.section-notify{
+    height: 60px;
+    width: 100%;
+    background-color: #8edafd;
+    display: flex;
+    align-items: center;
+    
+}
+.bell{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    
+}
+.bell i{
+    color: #8edafd;
+}
+.chat{
+    height: calc(100% - 80px - 60px);
+    background-image: url('../img/boolzapp.png');
+}
+.input-data{
+    height: 80px;
+    background-color: #ebe9eb;
 
-
+}
 
 
 
