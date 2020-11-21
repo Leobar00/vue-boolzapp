@@ -12,6 +12,9 @@ body{
     
     
 }
+img[src*='avatar']:hover{
+    filter: grayscale(30%);
+}
 *{
     margin: 0;
     padding: 0;
@@ -23,7 +26,7 @@ body{
 }
 /* box dell'applicazione */
 .box-app{
-    width: 80%;
+    width: 80vw;
     height: 85vh;
     margin-top: 30px;
     border: 1px solid black;
@@ -53,6 +56,9 @@ body{
 .icon-position i{
     margin: 10px;
     font-size: 20px;
+    color: grey;
+}
+.icon-position i:hover{
     color: #b2b0b2;
 }
 .photo-utente{
@@ -64,7 +70,7 @@ body{
 .right-bar{
     width:65%;
     height: 100%;
-    min-width: 350px;
+    min-width: 250px;
     
 
 }
@@ -108,7 +114,7 @@ body{
 }
 .input-data i{
     font-size: 25px;
-    color: #b2b0b2;
+    color: grey;
     margin: 30px;
 }
 .text-utente{
@@ -118,9 +124,10 @@ body{
 .text-utente input{
     width: 100%;
     height: 40px;
-    line-height: 40px;
     border-radius: 5px;
     border: 1px solid #b2b0b2;
+    border-radius: 50px 50px 50px 50px;
+    text-indent: 15px;
    
 }
 .container-search-bar{
@@ -136,24 +143,44 @@ body{
     background-color: white;
     width: 90%;
     height: 30px;
+    border: 0;
 
+}
+
+*:focus {
+    outline: none;
 }
 .search-bar input{
     width: 80%;
     height: 100%;
     border:1px solid white;
+   
 }
 .contact{
-    height: calc(100% - 60px - 40px - 60px);
+    height: calc(100% - 220px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow-y: scroll;
-    
     scrollbar-color: grey;
     scrollbar-width: thin;
-    min-height: calc(90% - 60px - 40px - 60px);
+    
+    
 }
+.contact-container{
+    background-color: white;
+    border-top: 1px solid #b2b0b2 ;
+    position: relative;
+}
+.nomi{
+    position: absolute;
+    
+}
+.contact-container:hover{
+    background-color:#b2b0b2;
+}
+
+
 
 
 

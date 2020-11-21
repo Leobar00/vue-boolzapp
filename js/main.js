@@ -2,6 +2,12 @@ const app = new Vue({
     el:'#root',
     data:{
         counter:0,
+        myName:
+              {
+                    myName:'Leonardo Barbieri',
+                    myImg:'img/avatar_7.jpg'
+              },
+        
         contatti:[
             {
                 avatar:'img/avatar_1.jpg',
@@ -27,10 +33,6 @@ const app = new Vue({
             {
                 avatar: 'img/avatar_6.jpg',
                 nome: 'Sara',
-            },
-            {
-                avatar: 'img/avatar_7.jpg',
-                nome: 'Leone',
             }
         ]
     }

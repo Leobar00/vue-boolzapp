@@ -30,8 +30,8 @@
                     <div class="user-data height-60">
                         <!-- foto e titolo -->
                         <span class="icon-position">
-                            <img class="photo-utente" src="img/avatar_io.jpg" alt="my-image">
-                            <h4>Nome Utente</h4>
+                            <img class="photo-utente" :src="myName.myImg" alt="my-image">
+                            <h4 >{{myName.myName}}</h4>
                             
                         </span>
                         <!-- icone -->
@@ -68,10 +68,12 @@
                     <!-- contatti  -->
                     <div class="contact">
                         <template v-for="(contatto,index) in contatti">
-                            <div>
+                            <div class="contact-container">
                                 <img class="photo-utente" :src="contatto.avatar" alt="">
-                               
-                                <span class="nomi">{{contatto.nome}}</span>
+                               <span class="nomi">
+                                   <span>{{contatto.nome}}</span>
+
+                               </span>
                                 
                             </div>
                         </template>
@@ -109,13 +111,13 @@
 
                     </div>
                     <div class="input-data">
-                        <span>
+                        <span class="icon-position">
                             <i class="fa fa-smile-o" aria-hidden="true"></i>
                         </span>
                         <span class="text-utente">
                             <input type="text" placeholder="Scrivi un messaggio">
                         </span>
-                        <span>
+                        <span class="icon-position">
                             <i class="fa fa-microphone" aria-hidden="true"></i>
                         </span>
                     </div>
