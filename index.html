@@ -109,9 +109,31 @@
                     </div>
                     <!-- chat con la persona -->
                     <div class="chat">
+                        <template>
+                            <div class="container-message">
+                                <div class="my-text">
+                                    <p>{{contatti[counter].myText}}</p>
+                                </div>
+                                
+                                <div>
+                                    <small></small>
+                                </div>
+                                
+                            </div>
+                            <div class="container-message-user" >
+                                <div class="user-text">
+                                    <p>{{contatti[counter].userText}}</p>
+                                </div>
+                                <div>
+                                    <small></small>
+                                </div>
+                            </div>
+
+                        </template>
                         
 
                     </div>
+                    <!-- input dell'utente -->
                     <div class="input-data">
                         <span class="icon-position">
                             <i class="fa fa-smile-o" aria-hidden="true"></i>

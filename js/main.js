@@ -13,32 +13,45 @@ const app = new Vue({
                 avatar:'img/avatar_1.jpg',
                 nome:'Michele',
                 lastSeen: ' 15:30 Lun 20 Nov',
+                myText: 'Ciao come stai?',
+                userText:'Bene tu?'
+
 
             },
             {
                 avatar: 'img/avatar_2.jpg',
                 nome: 'Leonardo',
-                lastSeen: ' 14:30 Lun 20 Nov'
+                lastSeen: ' 14:30 Lun 20 Nov',
+                myText: 'Ciao come stai?',
+                userText: 'Bene tu?'
             },
             {
                 avatar: 'img/avatar_3.jpg',
                 nome: 'Filippo',
-                lastSeen: ' 17:30 Lun 20 Nov'
+                lastSeen: ' 17:30 Lun 20 Nov',
+                myText: 'Ciao come stai?',
+                userText: 'Bene tu?'
             },
             {
                 avatar: 'img/avatar_4.jpg',
                 nome: 'Francesco',
-                lastSeen: ' 00:30 Lun 20 Nov'
+                lastSeen: ' 00:30 Lun 20 Nov',
+                myText: 'Ciao come ?',
+                userText: 'Bene tu?'
             },
             {
                 avatar: 'img/avatar_5.jpg',
                 nome: 'Sandro',
-                lastSeen: ' 02:30 Lun 20 Nov'
+                lastSeen: ' 02:30 Lun 20 Nov',
+                myText: 'Ciao come stai?',
+                userText: 'Bene tu?'
             },
             {
                 avatar: 'img/avatar_6.jpg',
-                nome: 'Sara',
-                lastSeen: ' 19:30 Lun 21 Nov'
+                nome: 'Laura',
+                lastSeen: ' 19:30 Lun 21 Nov',
+                myText: 'Ciao come stai?',
+                userText: 'Bene tu?'
             }
         ]
     }
