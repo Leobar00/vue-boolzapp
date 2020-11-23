@@ -116,6 +116,7 @@ img[src*='avatar']:hover{
 .chat{
     height: calc(100% - 60px - 60px);
     background-image: url('../img/mine.jpg');
+    overflow-y: auto;
 }
 .input-data{
     height: 60px;

@@ -18,7 +18,7 @@ const app = new Vue({
                 nome:'Michele',
                 lastSeen: ' 15:30 Lun 20 Nov',
                 myText: ['Ciao come stai?'],
-                userText:['Bene tu?']
+                userText:['Bene tu?','Ottimo']
 
 
             },
@@ -34,7 +34,7 @@ const app = new Vue({
                 nome: 'Filippo',
                 lastSeen: ' 17:30 Lun 20 Nov',
                 myText: ['Ciao come stai?'],
-                userText: ['Bene tu?']
+                userText: ['Bene tu?','bene']
             },
             {
                 avatar: 'img/avatar_4.jpg',
@@ -60,8 +60,8 @@ const app = new Vue({
         ]
     },
     methods:{
-        goMyCounter(){
-            this.myText
+        myDate(){
+            return new Date()
 
         },
         newMessage(){
@@ -70,6 +70,9 @@ const app = new Vue({
             this.myCounterMessage++;
             this.myInput = '';
         },
+        validateMessageUser(){
+            this.contatti[this.counter].userText.length
+        }
         
         
     }
