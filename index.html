@@ -108,11 +108,10 @@
                         </span>                
                     </div>
                     <!-- chat con la persona -->
-                    <div class="chat">
-                        <template>
-                            <div class="container-message">
+                      <div class="chat" > 
+                            <!-- <div class="container-message">
                                 <div class="my-text">
-                                    <p>{{contatti[counter].myText}}</p>
+                                    <p>{{contatti[counter].myText[0]}}</p>
                                 </div>
                                 
                                 <div>
@@ -122,14 +121,33 @@
                             </div>
                             <div class="container-message-user" >
                                 <div class="user-text">
-                                    <p>{{contatti[counter].userText}}</p>
+                                    <p>{{contatti[counter].userText[0]}}</p>
                                 </div>
                                 <div>
                                     <small></small>
                                 </div>
-                            </div>
-
-                        </template>
+                            </div>  -->
+                            <!-- seconda parte -->
+                            <template v-for='message in contatti[counter].myText'>
+                                <div class="container-message">
+                                    <div class="my-text">
+                                        <p>{{message}}</p>
+                                    </div>
+                            
+                                    <div>
+                                        <small></small>
+                                    </div>
+                            
+                                </div>
+                                <div class="container-message-user">
+                                    <div class="user-text">
+                                        <p>{{contatti[counter].userText[userCounterMessage]}}</p>
+                                    </div>
+                                    <div>
+                                        <small></small>
+                                    </div>
+                                </div>
+                            </template>
                         
 
                     </div>
@@ -139,7 +157,7 @@
                             <i class="fa fa-smile-o" aria-hidden="true"></i>
                         </span>
                         <span class="text-utente">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input v-model="myInput" @keypress.enter="newMessage" type="text" placeholder="Scrivi un messaggio">
                         </span>
                         <span class="icon-position">
                             <i class="fa fa-microphone" aria-hidden="true"></i>

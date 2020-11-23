@@ -2,6 +2,10 @@ const app = new Vue({
     el:'#root',
     data:{
         counter:0,
+        myCounterMessage:0,
+        userCounterMessage:0,
+        myInput:'',
+
         myName:
               {
                     myName:'Leonardo Barbieri',
@@ -13,8 +17,8 @@ const app = new Vue({
                 avatar:'img/avatar_1.jpg',
                 nome:'Michele',
                 lastSeen: ' 15:30 Lun 20 Nov',
-                myText: 'Ciao come stai?',
-                userText:'Bene tu?'
+                myText: ['Ciao come stai?'],
+                userText:['Bene tu?']
 
 
             },
@@ -22,38 +26,52 @@ const app = new Vue({
                 avatar: 'img/avatar_2.jpg',
                 nome: 'Leonardo',
                 lastSeen: ' 14:30 Lun 20 Nov',
-                myText: 'Ciao come stai?',
-                userText: 'Bene tu?'
+                myText: ['Ciao come stai?'],
+                userText: ['Bene tu?']
             },
             {
                 avatar: 'img/avatar_3.jpg',
                 nome: 'Filippo',
                 lastSeen: ' 17:30 Lun 20 Nov',
-                myText: 'Ciao come stai?',
-                userText: 'Bene tu?'
+                myText: ['Ciao come stai?'],
+                userText: ['Bene tu?']
             },
             {
                 avatar: 'img/avatar_4.jpg',
                 nome: 'Francesco',
                 lastSeen: ' 00:30 Lun 20 Nov',
-                myText: 'Ciao come ?',
-                userText: 'Bene tu?'
+                myText: ['Ciao come ?'],
+                userText: ['Bene tu?']
             },
             {
                 avatar: 'img/avatar_5.jpg',
                 nome: 'Sandro',
                 lastSeen: ' 02:30 Lun 20 Nov',
-                myText: 'Ciao come stai?',
-                userText: 'Bene tu?'
+                myText: ['Ciao come stai?'],
+                userText: ['Bene tu?']
             },
             {
                 avatar: 'img/avatar_6.jpg',
                 nome: 'Laura',
                 lastSeen: ' 19:30 Lun 21 Nov',
-                myText: 'Ciao come stai?',
-                userText: 'Bene tu?'
+                myText: ['Ciao come stai?'],
+                userText: ['Bene tu?']
             }
         ]
+    },
+    methods:{
+        goMyCounter(){
+            this.myText
+
+        },
+        newMessage(){
+            // metto all'interno dell array con i mie messaggi il messaggio scritto nell'InputDeviceInfo, aumento di 1 il myCounter facendo in modo che io possa prendere il messaggio siccessivo
+            this.contatti[this.counter].myText.push(this.myInput);
+            this.myCounterMessage++;
+            this.myInput = '';
+        },
+        
+        
     }
 })
 
