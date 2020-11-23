@@ -1,6 +1,7 @@
 const app = new Vue({
     el:'#root',
     data:{
+        background:false,
         counter:0,
         myCounterMessage:0,
         userCounterMessage:0,
@@ -26,36 +27,36 @@ const app = new Vue({
                 avatar: 'img/avatar_2.jpg',
                 nome: 'Leonardo',
                 lastSeen: ' 14:30 Lun 20 Nov',
-                myText: ['Ciao come stai?'],
-                userText: ['Bene tu?']
+                myText: ['vai a prendere la spesa?'],
+                userText: ['Va bene','Ho capito','Lo farò più tardi']
             },
             {
                 avatar: 'img/avatar_3.jpg',
                 nome: 'Filippo',
                 lastSeen: ' 17:30 Lun 20 Nov',
-                myText: ['Ciao come stai?'],
-                userText: ['Bene tu?','bene']
+                myText: ['Porto Billy dal veterinario'],
+                userText: ['Sta male?','Speriamo si rimetta']
             },
             {
                 avatar: 'img/avatar_4.jpg',
                 nome: 'Francesco',
                 lastSeen: ' 00:30 Lun 20 Nov',
-                myText: ['Ciao come ?'],
-                userText: ['Bene tu?']
+                myText: ['Ciao Francesco come ho svolto l esercizio?'],
+                userText: ['Abbastanza bene potresti fare meglio','Impegnati di più','Occhio all indentazione']
             },
             {
                 avatar: 'img/avatar_5.jpg',
                 nome: 'Sandro',
                 lastSeen: ' 02:30 Lun 20 Nov',
-                myText: ['Ciao come stai?'],
-                userText: ['Bene tu?']
+                myText: ['Dove sei?'],
+                userText: ['Sono in centro e tu?','Troviamoci dal McDonald','A dopo']
             },
             {
                 avatar: 'img/avatar_6.jpg',
                 nome: 'Laura',
                 lastSeen: ' 19:30 Lun 21 Nov',
-                myText: ['Ciao come stai?'],
-                userText: ['Bene tu?']
+                myText: ['Sta sera non ho voglia di uscire'],
+                userText: ['Neanche io','Preferirei stare in casa']
             }
         ]
     },
@@ -72,6 +73,9 @@ const app = new Vue({
         },
         validateMessageUser(){
             this.contatti[this.counter].userText.length
+        },
+        backgroundColor(){
+            return this.background = !this.background
         }
         
         

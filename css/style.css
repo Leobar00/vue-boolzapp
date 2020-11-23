@@ -196,16 +196,14 @@ img[src*='avatar']:hover{
     background-color: #e5fcd0;
     border-radius: 10px;
     padding: 10px;
-    margin-top: 30px;
-    margin-right: 30px;
+    margin: 20px;
     
 }
 .user-text{
     background-color: #ffffff;
     border-radius: 10px;
     float: left;
-    margin-top: 30px;
-    margin-left: 30px;
+   margin: 20px;
     padding: 10px;
 }
 .container-message{
@@ -225,7 +223,11 @@ img[src*='avatar']:hover{
     align-items: flex-start;
 }
 
-
+.backgroundchange{
+    background-color: #101314;
+    color: white;
+     
+}
 
 
 
