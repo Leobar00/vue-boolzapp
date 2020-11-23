@@ -1,5 +1,8 @@
 body{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-repeat: no-repeat;
     width:100vw;
     background-image:
@@ -23,21 +26,30 @@ img[src*='avatar']:hover{
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 1100px;
+    height: 80vh;
+    min-height: 500px;
+    
 }
 /* box dell'applicazione */
 .box-app{
     width: 80vw;
-    height: 85vh;
-    margin-top: 30px;
+    height: 80vh;
     border: 1px solid black;
     background-color: white;
     display: flex;
+    
+
+    
 }
 .left-bar{
     border: 1px solid black;
     width: 35%;
     height: 100%;
-    min-width: 250px;
+    flex: 0 0 350px;
 }
 .height-60{
     height: 60px;
@@ -71,6 +83,7 @@ img[src*='avatar']:hover{
     width:65%;
     height: 100%;
     min-width: 250px;
+    flex: 1 1 100%;
     
 
 }
@@ -157,20 +170,19 @@ img[src*='avatar']:hover{
    
 }
 .contact{
-    height: calc(100% - 220px);
+    width: 100%;
+    height: calc(100% - 160px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    overflow-y: scroll;
-    scrollbar-color: grey;
-    scrollbar-width: thin;
-    
-    
+    background-color: white;
+    overflow-y: auto  ;
+
 }
 .contact-container{
     background-color: white;
     border-top: 1px solid #b2b0b2 ;
     position: relative;
+    
 }
 .nomi{
     position: absolute;

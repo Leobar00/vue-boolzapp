@@ -68,10 +68,11 @@
                     <!-- contatti  -->
                     <div class="contact">
                         <template v-for="(contatto,index) in contatti">
-                            <div class="contact-container">
+                            
+                            <div class="contact-container" @click="counter = index">
                                 <img class="photo-utente" :src="contatto.avatar" alt="">
                                <span class="nomi">
-                                   <span>{{contatto.nome}}</span>
+                                   <span>{{contatti[index].nome}}</span>
 
                                </span>
                                 
@@ -90,11 +91,11 @@
                                 <img class="photo-utente" :src="contatti
                             [counter].avatar" alt="avata1">
                             </span>
-                            <span>
+                            <span class="">
                                 <p>
                                     {{contatti[counter].nome}} 
                                 </p>
-                                <small>Ultimo accesso oggi alle </small>
+                                <small>Ultimo accesso alle {{contatti[counter].lastSeen}} </small>
                                 
                             </span>
                         </span>
@@ -108,6 +109,7 @@
                     </div>
                     <!-- chat con la persona -->
                     <div class="chat">
+                        
 
                     </div>
                     <div class="input-data">

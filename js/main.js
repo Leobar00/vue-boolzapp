@@ -11,28 +11,34 @@ const app = new Vue({
         contatti:[
             {
                 avatar:'img/avatar_1.jpg',
-                nome:'Michele'
+                nome:'Michele',
+                lastSeen: ' 15:30 Lun 20 Nov',
 
             },
             {
                 avatar: 'img/avatar_2.jpg',
                 nome: 'Leonardo',
+                lastSeen: ' 14:30 Lun 20 Nov'
             },
             {
                 avatar: 'img/avatar_3.jpg',
                 nome: 'Filippo',
+                lastSeen: ' 17:30 Lun 20 Nov'
             },
             {
                 avatar: 'img/avatar_4.jpg',
                 nome: 'Francesco',
+                lastSeen: ' 00:30 Lun 20 Nov'
             },
             {
                 avatar: 'img/avatar_5.jpg',
                 nome: 'Sandro',
+                lastSeen: ' 02:30 Lun 20 Nov'
             },
             {
                 avatar: 'img/avatar_6.jpg',
                 nome: 'Sara',
+                lastSeen: ' 19:30 Lun 21 Nov'
             }
         ]
     }
