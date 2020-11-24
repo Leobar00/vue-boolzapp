@@ -69,11 +69,11 @@
                     <div class="contact">
                         <template v-for="(contatto,index) in filterContacts">
                             
-                            <div class="contact-container" :class="{bgSelected: index === counter}" @click="counter = index" >
+                            <div class="contact-container" :class="{bgSelected: index === counter}"
+                             @click="counter = contatto.id" >
                                 <img class="photo-utente" :src="contatto.avatar" alt="">
                                <span class="nomi">
                                    <span>{{contatto.nome}}</span>
-
                                </span>
                                 
                             </div>

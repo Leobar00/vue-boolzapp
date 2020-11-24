@@ -11,9 +11,6 @@ body{
       #019689 15vh,
       #d9dbd7 15vh,
       #d9dbd7 100%)
-    
-    
-    
 }
 img[src*='avatar']:hover{
     filter: grayscale(30%);
@@ -215,7 +212,8 @@ img[src*='avatar']:hover{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-end;
-    word-break: break-all;
+    /* word-break: break-all; */
+    word-wrap: break-word;
 
 }
 .container-message-user{
@@ -225,7 +223,9 @@ img[src*='avatar']:hover{
     flex-wrap: wrap;
     flex-direction:column;
     align-items: flex-start;
-    word-break: break-all;
+    /* word-break: break-all; */
+    word-wrap: break-word;
+
 }
 .bgSelected{
     background-color: #b2b0b2;

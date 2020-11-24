@@ -8,16 +8,16 @@ const app = new Vue({
         myCounterMessage:0,
         myInput:'',
         search:'',
-       
-
+        
         myName:
               {
                     myName:'Leonardo Barbieri',
                     myImg:'img/avatar_7.jpg'
               },
-        
+        // i mie contatti 
         contatti:[
             {
+                id: 0,
                 avatar:'img/avatar_1.jpg',
                 nome:'Michele',
                 lastSeen: ' 15:30 ',
@@ -26,6 +26,7 @@ const app = new Vue({
                 data: new Date().toLocaleString()
             },
             {
+                id: 1,
                 avatar: 'img/avatar_2.jpg',
                 nome: 'Leonardo',
                 lastSeen: ' 14:30',
@@ -34,6 +35,7 @@ const app = new Vue({
                 data: new Date().toLocaleString()
             },
             {
+                id: 2,
                 avatar: 'img/avatar_3.jpg',
                 nome: 'Filippo',
                 lastSeen: ' 17:30',
@@ -42,6 +44,7 @@ const app = new Vue({
                 data: new Date().toLocaleString()
             },
             {
+                id: 3,
                 avatar: 'img/avatar_4.jpg',
                 nome: 'Francesco',
                 lastSeen: ' 00:30',
@@ -50,6 +53,7 @@ const app = new Vue({
                 data: new Date().toLocaleString()
             },
             {
+                id: 4,
                 avatar: 'img/avatar_5.jpg',
                 nome: 'Sandro',
                 lastSeen: ' 02:30',
@@ -58,6 +62,7 @@ const app = new Vue({
                 data: new Date().toLocaleString()
             },
             {
+                id: 5,
                 avatar: 'img/avatar_6.jpg',
                 nome: 'Laura',
                 lastSeen: ' 19:30 ',
@@ -78,7 +83,8 @@ const app = new Vue({
         },
    
     },
-    computed: { // Search chat filter
+    computed: { 
+        // filtraggio della search-bar 
         filterContacts() {
             return this.contatti.filter(contact => {
                 return contact.nome.toLowerCase().includes(this.search.toLowerCase());
