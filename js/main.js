@@ -1,11 +1,14 @@
+
+
 const app = new Vue({
     el:'#root',
     data:{
         background:false,
         counter:0,
         myCounterMessage:0,
-        userCounterMessage:0,
         myInput:'',
+        search:'',
+       
 
         myName:
               {
@@ -17,70 +20,73 @@ const app = new Vue({
             {
                 avatar:'img/avatar_1.jpg',
                 nome:'Michele',
-                lastSeen: ' 15:30 Lun 20 Nov',
+                lastSeen: ' 15:30 ',
                 myText: ['Ciao come stai?'],
-                userText:['Bene tu?','Ottimo']
-
-
+                userText: ['Bene tu?', 'Ottimo'], 
+                data: new Date().toLocaleString()
             },
             {
                 avatar: 'img/avatar_2.jpg',
                 nome: 'Leonardo',
-                lastSeen: ' 14:30 Lun 20 Nov',
+                lastSeen: ' 14:30',
                 myText: ['vai a prendere la spesa?'],
-                userText: ['Va bene','Ho capito','Lo farò più tardi']
+                userText: ['Va bene','Ho capito'],
+                data: new Date().toLocaleString()
             },
             {
                 avatar: 'img/avatar_3.jpg',
                 nome: 'Filippo',
-                lastSeen: ' 17:30 Lun 20 Nov',
+                lastSeen: ' 17:30',
                 myText: ['Porto Billy dal veterinario'],
-                userText: ['Sta male?','Speriamo si rimetta']
+                userText: ['Sta male?','Speriamo si rimetta'],
+                data: new Date().toLocaleString()
             },
             {
                 avatar: 'img/avatar_4.jpg',
                 nome: 'Francesco',
-                lastSeen: ' 00:30 Lun 20 Nov',
+                lastSeen: ' 00:30',
                 myText: ['Ciao Francesco come ho svolto l esercizio?'],
-                userText: ['Abbastanza bene potresti fare meglio','Impegnati di più','Occhio all indentazione']
+                userText: ['Abbastanza bene potresti fare meglio','Impegnati di più'],
+                data: new Date().toLocaleString()
             },
             {
                 avatar: 'img/avatar_5.jpg',
                 nome: 'Sandro',
-                lastSeen: ' 02:30 Lun 20 Nov',
+                lastSeen: ' 02:30',
                 myText: ['Dove sei?'],
-                userText: ['Sono in centro e tu?','Troviamoci dal McDonald','A dopo']
+                userText: ['Sono in centro e tu?','Troviamoci dal McDonald'],
+                data: new Date().toLocaleString()
             },
             {
                 avatar: 'img/avatar_6.jpg',
                 nome: 'Laura',
-                lastSeen: ' 19:30 Lun 21 Nov',
+                lastSeen: ' 19:30 ',
                 myText: ['Sta sera non ho voglia di uscire'],
-                userText: ['Neanche io','Preferirei stare in casa']
+                userText: ['Neanche io','Preferirei stare in casa'],
+                data: new Date().toLocaleString()
             }
         ]
     },
     methods:{
-        myDate(){
-            return new Date()
-
-        },
         newMessage(){
             // metto all'interno dell array con i mie messaggi il messaggio scritto nell'InputDeviceInfo, aumento di 1 il myCounter facendo in modo che io possa prendere il messaggio siccessivo
+            
             this.contatti[this.counter].myText.push(this.myInput);
             this.myCounterMessage++;
             this.myInput = '';
+            
         },
-        validateMessageUser(){
-            this.contatti[this.counter].userText.length
+   
+    },
+    computed: { // Search chat filter
+        filterContacts() {
+            return this.contatti.filter(contact => {
+                return contact.nome.toLowerCase().includes(this.search.toLowerCase());
+            })
         },
-        backgroundColor(){
-            return this.background = !this.background
-        }
-        
-        
     }
 })
+
 
 
 

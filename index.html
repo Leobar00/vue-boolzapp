@@ -61,18 +61,18 @@
                     <div class="container-search-bar">
                         <span class="search-bar icon-position">
                             <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model='search' type="text" placeholder="Cerca o inizia una nuova chat">
                         </span>
 
                     </div>
                     <!-- contatti  -->
                     <div class="contact">
-                        <template v-for="(contatto,index) in contatti">
+                        <template v-for="(contatto,index) in filterContacts">
                             
-                            <div class="contact-container" @click="counter = index">
+                            <div class="contact-container" :class="{bgSelected: index === counter}" @click="counter = index" >
                                 <img class="photo-utente" :src="contatto.avatar" alt="">
                                <span class="nomi">
-                                   <span>{{contatti[index].nome}}</span>
+                                   <span>{{contatto.nome}}</span>
 
                                </span>
                                 
@@ -109,43 +109,19 @@
                     </div>
                     <!-- chat con la persona -->
                       <div class="chat" > 
-                            <!-- <div class="container-message">
-                                <div class="my-text">
-                                    <p>{{contatti[counter].myText[0]}}</p>
-                                </div>
-                                
-                                <div>
-                                    <small></small>
-                                </div>
-                                
-                            </div>
-                            <div class="container-message-user" >
-                                <div class="user-text">
-                                    <p>{{contatti[counter].userText[0]}}</p>
-                                </div>
-                                <div>
-                                    <small></small>
-                                </div>
-                            </div>  -->
-                            <!-- seconda parte -->
+                           
                             <template v-for='(message,myIndex) in contatti[counter].myText'>
                                 <div class="container-message">
                                     <div class="my-text">
                                         <p>{{message}}</p>
-                                    </div>
-                            
-                                    <div>
-                                        <small></small>
-                                    </div>
-                            
+                                        <small>{{contatti[counter].data}}</small>
+                                    </div> 
                                 </div>
                         
                                 <div class="container-message-user">
                                     <div class="user-text" v-if='myIndex < contatti[counter].userText.length? true : false'> 
                                         <p>{{contatti[counter].userText[myIndex]}}</p>
-                                    </div>
-                                    <div>
-                                        <small></small>
+                                        <small >{{contatti[counter].data}}</small>
                                     </div>
                                 </div>
                             </template>
