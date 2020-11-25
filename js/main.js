@@ -8,6 +8,11 @@ const app = new Vue({
         myCounterMessage:0,
         myInput:'',
         search:'',
+        randomResponse:['ok','va bene'],
+        show:false,
+        emoji:[...allEmojis],
+        activeEmoji: false,
+
         
         myName:
               {
@@ -81,7 +86,10 @@ const app = new Vue({
             this.myInput = '';
             
         },
-   
+        toggleEmoji(){
+            this.activeEmoji = !this.activeEmoji
+        }
+        
     },
     computed: { 
         // filtraggio della search-bar 
@@ -90,6 +98,10 @@ const app = new Vue({
                 return contact.nome.toLowerCase().includes(this.search.toLowerCase());
             })
         },
+        // randomMessage() {  // random risposta
+        //     var number = Math.floor(Math.random() * this.randomResponse.length)
+        //     return this.randomResponse[number]
+        // }
     }
 })
 
