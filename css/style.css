@@ -260,14 +260,32 @@ img[src*='avatar']:hover{
   opacity: 0;
 }
 .emoji{
-    margin: 4px;
+    padding: 4px;
     cursor: pointer;
 }
 .emoji:hover{
     background-color: #b8b8b8;
     border-radius: 50%;
 }
+.select-box{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+    align-items: center;
+}
+.section i{
+    font-size: 20px;
+    color: grey;
+    padding: 5px;
+    cursor: pointer;
 
+}
+.section:hover{
+    border-bottom: 3px solid #019689;
+    
+}
 
 
 

@@ -3,15 +3,17 @@
 const app = new Vue({
     el:'#root',
     data:{
-        background:false,
         counter:0,
         myCounterMessage:0,
         myInput:'',
         search:'',
         randomResponse:['ok','va bene'],
         show:false,
-        emoji:[...allEmojis],
-        activeEmoji: false,
+        active: false,
+        emojis:[...emojis],
+        famEmoji:[...emojiFamily],
+        searchEmoji:'',
+        
 
         
         myName:
@@ -86,9 +88,17 @@ const app = new Vue({
             this.myInput = '';
             
         },
-        toggleEmoji(){
-            this.activeEmoji = !this.activeEmoji
-        }
+        toggleActive: function(em){
+            this.active = !this.active;
+            this.myInput += em.emoji;
+            
+        },
+        toggleShow:function(){
+            this.show = !this.show;
+            
+        },
+
+        
         
     },
     computed: { 
@@ -98,10 +108,20 @@ const app = new Vue({
                 return contact.nome.toLowerCase().includes(this.search.toLowerCase());
             })
         },
-        // randomMessage() {  // random risposta
-        //     var number = Math.floor(Math.random() * this.randomResponse.length)
-        //     return this.randomResponse[number]
+
+        // lastMessage: function (index) {
+        //     if (this.contatti[this.counter].myText.length < this.contatti[this.counter].userText.length) {
+        //         return this.contatti[this.counter].userText[index]
+        //     } else {
+        //         return this.contatti[this.counter].myText[index]
+        //     }
+        // },
+        // randomMessage: function (arrayMessage) {  // random risposta
+        //     return arrayMessage[Math.floor(Math.random() * arrayMessage.length)]
         // }
+       
+        
+
     }
 })
 
